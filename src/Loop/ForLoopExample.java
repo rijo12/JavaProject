@@ -10,17 +10,17 @@ public class ForLoopExample {
 	public static void main(String[] args) {
 		double loanAmount = 0;
 		double monthlyAmount = 0;
-		double monthlyInstalment = 0;
+		double monthlyInstallment = 0;
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the amount");
 		loanAmount = sc.nextInt();
 
 		for (int i = 1; i <= 3; i++) {
-			monthlyInstalment = loanAmount * 0.1;
-			System.out.println(i + "month 10% loan amount= " + monthlyInstalment);
-			monthlyAmount = loanAmount - (monthlyInstalment);
-			System.out.println("After" + i + " month Remaining Amount=" + monthlyAmount);
+			monthlyInstallment = loanAmount * 0.1;
+			System.out.println(i + " month 10% loan amount= " + monthlyInstallment);
+			monthlyAmount = loanAmount - (monthlyInstallment);
+			System.out.println("After " + i + " month Remaining Amount=" + monthlyAmount);
 			loanAmount = monthlyAmount;
 
 		}
