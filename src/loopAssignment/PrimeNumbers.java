@@ -7,6 +7,7 @@ public class PrimeNumbers {
 	public static void main(String[] args) {
 	
 		int number,value;
+		boolean prime= false ;
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -16,7 +17,7 @@ public class PrimeNumbers {
 		
 		if (number==0 || number<0 || number ==1) {
 			
-			System.out.println(" Not a prime number");
+			System.out.println("Not a prime number");
 		}
 		
 		if (number==2) {
@@ -30,19 +31,17 @@ public class PrimeNumbers {
 				value= number%i;
 				
 				if(value==0) {
+					prime=true;
+					System.out.println("Not a Prime Number");
 					break;
 				}
 										
 			}
-			System.out.println("Not a Prime Number");
+			if (!prime ) {
+				System.out.println("Prime Number");	
+			}
 			
-		}
-			
-		else {
-			
-			System.out.println("Prime Number");
-		}
-			
+		}	
 	}
 
 }
