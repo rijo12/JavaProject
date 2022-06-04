@@ -10,24 +10,25 @@ public class NumberCount {
 		
 		String number="";
 		
+		int count =0; // counter variable to get the number 
+		
 		System.out.println("Enter 'y' after entering numbers to get count");
 		
 		System.out.println("Enter the Number:");
 		
-		for (int i=1;i<=100;i++) {
+		do {
+			number =sc.next(); // input the number to variable number
 			
-			number= sc.next();
+			count++; // // variable count incremented by 1
 			
-			if(number.equals("y")) {
+			if (number=="y") { // checks the entered input is y
 				
-				System.out.println("Numbers Entered= "+i);
-				
-				break;
+				break;    // exit the do while loop
 			}
 			
-		}
+		}while(!number.equals("y"));  // checks the condition that user entered y
 		
-
+		System.out.println("Numbers Entered = "+count);
 	}
 
 }
