@@ -6,6 +6,12 @@ public class LaptopMain {
 		
 		Laptop objectInitialization =new Laptop();
 		
+		objectInitialization.laptopName= "hp";
+		
+		objectInitialization.processorType= "Core2Duo";
+		
+		objectInitialization.ramSize= 16;
+		
 		Laptop laptopMethod = new Laptop();
 		
 		laptopMethod.laptopVariableIntializationUsingMethod();
@@ -13,7 +19,6 @@ public class LaptopMain {
 		Laptop laptopConstructor= new Laptop("hp", 16, "Atom");
 		
 		
-
 	}
 
 }
