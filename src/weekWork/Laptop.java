@@ -6,16 +6,10 @@ public class Laptop {
 	int ramSize;
 	String processorType;
 
-	void laptopVariableIntializationUsingMethod() {
+	void laptopVariableIntializationUsingMethod(String laptopName1, int ramSize1, String processorType1 ) {
 		
 		
-		laptopName = "Acer";
-		
-		ramSize = 8;
-		
-		processorType= "intel";
-		
-		System.out.println(laptopName+ ramSize + processorType);
+		System.out.println(laptopName1+ ramSize1 + processorType1);
 			
 		
 	}

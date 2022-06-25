@@ -23,22 +23,22 @@ public class Book {
 		
 	}
 	
-	String getauthor(String author) {
+	String getauthor() {
 
-		authorName = author;
+		authorName = "ABC";
 
 		return authorName;
 	}
 
-	String getName(String bookName) {
+	String getName() {
 
-		title = bookName;
+		title = "ABCDEFG";
 
 		return title;
 	}
-	int getPages(int page1) {
+	int getPages() {
 		
-		pageCount= page1;
+		pageCount= 100;
 		
 		return pageCount;
 		

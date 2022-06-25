@@ -8,15 +8,15 @@ public class BookMain {
 
 		Book authorReturn = new Book();
 
-		System.out.println(authorReturn.getauthor("CDE"));
+		System.out.println(authorReturn.getauthor());
 
 		Book titleReturn = new Book();
 
-		System.out.println(titleReturn.getName("GGG"));
+		System.out.println(titleReturn.getName());
 
 		Book pageReturn = new Book();
 
-		System.out.println(pageReturn.getPages(100));
+		System.out.println(pageReturn.getPages());
 
 	}
 
