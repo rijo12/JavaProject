@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -35,9 +36,9 @@ public class GameClass {
 
 		System.out.println(movies[indexNumber]);
 
-		String guessMovie = movies[indexNumber]; // convert the movie name
+		String guessMovie = movies[indexNumber];
 
-		String underScoreName = guessMovie.replaceAll("[a-z ]", "_");
+		String underScoreName = guessMovie.replaceAll("[a-z]", "_");
 
 		System.out.println("You are guessing: " + underScoreName);
 
@@ -57,19 +58,37 @@ public class GameClass {
 
 		int k = 0;
 
+		int counter = 0;
+
+		int won = 0;
+
 		boolean isEqual = false;
 
-		for (int j = 0; j < 100; j++) {
+		boolean isEqualChar = false;
 
-			System.out.println(underScore);
-						
-			if(underScore[j]!='_') {
-				
+		for (int j = 0; j < guessMovie.length(); j++) {
+
+			if (isEqualChar) {
+
 				System.out.println("You Won");
-				
+
 				break;
 			}
-			else {
+
+			if (m == 1 && counter == 0) {
+
+				k += 1;
+
+			}
+
+			if (k == 10) {
+
+				System.out.println("Try again");
+
+				break;
+			}
+			
+			System.out.println(underScore);
 
 			System.out.println("You have guessed " + k + " wrong letters");
 
@@ -80,20 +99,27 @@ public class GameClass {
 			for (int i = 0; i < movie.length; i++) {
 
 				if (guessedLetter == movie[i]) {
-					
 
 					isEqual = true;
 
-					char value = movie[i];
+					if (isEqual) {
 
-					underScore[i] = value;
+						char value = movie[i];
 
+						underScore[i] = value;
+
+						counter = 1;
+
+						isEqualChar = Arrays.equals(underScore, movie);
+
+
+					}
+					
 				}
 
-				if (!isEqual) {
+				else {
 
-					
-					}
+					m = 1;
 
 				}
 
@@ -102,4 +128,5 @@ public class GameClass {
 		}
 
 	}
+
 }
