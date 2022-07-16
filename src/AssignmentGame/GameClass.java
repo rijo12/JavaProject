@@ -58,9 +58,9 @@ public class GameClass {
 
 		int k = 0;
 
-		int counter = 0;
-
 		int won = 0;
+
+		int counter = 0;
 
 		boolean isEqual = false;
 
@@ -69,6 +69,8 @@ public class GameClass {
 		for (int j = 0; j < guessMovie.length(); j++) {
 
 			if (isEqualChar) {
+
+				System.out.println(underScore);
 
 				System.out.println("You Won");
 
@@ -83,11 +85,13 @@ public class GameClass {
 
 			if (k == 10) {
 
+				System.out.println("You have guessed " + k + " wrong letters");
+
 				System.out.println("Try again");
 
 				break;
 			}
-			
+
 			System.out.println(underScore);
 
 			System.out.println("You have guessed " + k + " wrong letters");
@@ -95,6 +99,8 @@ public class GameClass {
 			System.out.println("Guess a letter: ");
 
 			char guessedLetter = sc.next().charAt(0);
+
+			counter = 0;
 
 			for (int i = 0; i < movie.length; i++) {
 
@@ -112,9 +118,8 @@ public class GameClass {
 
 						isEqualChar = Arrays.equals(underScore, movie);
 
-
 					}
-					
+
 				}
 
 				else {
